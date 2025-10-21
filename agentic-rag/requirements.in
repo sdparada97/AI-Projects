@@ -1,0 +1,7 @@
+langchain
+langgraph
+langchain-openai
+
+langgraph-cli[inmem]
+ipykernel
+
