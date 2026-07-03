@@ -1,0 +1,43 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "FastAPI: Debug rag_agentico (uvicorn)",
+      "type": "python",
+      "request": "launch",
+      "module": "uvicorn",
+      "args": [
+        "app.main:app",
+        "--host",
+        "127.0.0.1",
+        "--port",
+        "8000",
+        "--reload"
+      ],
+      "cwd": "${workspaceFolder}/rag_agentico",
+      "env": {
+        "PYTHONPATH": "${workspaceFolder}/rag_agentico"
+      },
+      "envFile": "${workspaceFolder}/rag_agentico/.env",
+      "console": "integratedTerminal",
+      "justMyCode": true,
+      "preLaunchTask": "uv: sync rag_agentico",
+      "python": "${workspaceFolder}/rag_agentico/.venv/bin/python"
+    },
+    {
+      "name": "Pytest: Debug current file (rag_agentico)",
+      "type": "python",
+      "request": "launch",
+      "module": "pytest",
+      "args": [
+        "-q",
+        "${file}"
+      ],
+      "cwd": "${workspaceFolder}/rag_agentico",
+      "console": "integratedTerminal",
+      "justMyCode": true,
+      "preLaunchTask": "uv: sync rag_agentico"
+,     "python": "${workspaceFolder}/rag_agentico/.venv/bin/python"
+    }
+  ]
+}
